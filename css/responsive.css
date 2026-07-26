@@ -1,0 +1,97 @@
+/* ==========================================================================
+   Responsive overrides
+   ========================================================================== */
+
+@media (max-width: 1360px) {
+  .nav-links {
+    position: fixed;
+    inset: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: min(78vw, 340px);
+    background: var(--gradient-dark);
+    border-inline-start: 1px solid var(--glass-border);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-inline-end: var(--space-lg);
+    gap: var(--space-lg);
+    transform: translateX(100%);
+    transition: transform var(--t-med);
+    z-index: 1050;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-links.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar__actions .btn--primary.desktop-only {
+    display: none;
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(9, 16, 21, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--t-fast), visibility var(--t-fast);
+}
+
+.nav-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 1361px) {
+  .nav-overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .price-table {
+    min-width: 420px;
+  }
+
+  .hero__visual-badge {
+    right: 0.5rem;
+    bottom: -1rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .back-to-top {
+    left: 1rem;
+    bottom: 1rem;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.85rem 1.6rem;
+    font-size: var(--fs-small);
+  }
+
+  .section {
+    padding-block: clamp(3rem, 12vw, 5rem);
+  }
+}
