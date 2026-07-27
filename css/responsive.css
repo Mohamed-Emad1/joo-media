@@ -13,14 +13,19 @@
     background: var(--gradient-dark);
     border-inline-start: 1px solid var(--glass-border);
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     padding-inline-end: var(--space-lg);
+    padding-top: calc(var(--navbar-h) + 1.5rem);
+    padding-bottom: 2rem;
     gap: var(--space-lg);
     transform: translateX(100%);
     transition: transform var(--t-med);
     z-index: 1050;
     box-shadow: var(--shadow-lg);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
 
   .nav-links.is-open {

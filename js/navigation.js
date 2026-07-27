@@ -18,12 +18,29 @@
     }
   }
 
+  let savedScrollY = 0;
+
   function toggleMenu(forceClose) {
     const shouldClose = forceClose === true || navLinks.classList.contains("is-open");
     navLinks.classList.toggle("is-open", !shouldClose);
     navOverlay.classList.toggle("is-open", !shouldClose);
     hamburger.classList.toggle("is-open", !shouldClose);
-    document.body.style.overflow = !shouldClose ? "hidden" : "";
+
+    if (!shouldClose) {
+      savedScrollY = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${savedScrollY}px`;
+      document.body.style.left = "0";
+      document.body.style.right = "0";
+      document.body.style.width = "100%";
+    } else {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.left = "";
+      document.body.style.right = "";
+      document.body.style.width = "";
+      window.scrollTo(0, savedScrollY);
+    }
   }
 
   function setActiveLink() {
