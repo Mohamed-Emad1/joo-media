@@ -10,6 +10,7 @@
   align-items: center;
   background: var(--gradient-hero);
   padding-top: var(--navbar-h);
+  overflow: hidden;
 }
 
 .hero__inner {
@@ -81,8 +82,9 @@
 
 .hero__visual-badge {
   position: absolute;
-  bottom: -1.5rem;
-  right: -1.5rem;
+  bottom: -1rem;
+  right: -0.5rem;
+  max-width: calc(100vw - 2.5rem);
   background: var(--color-white);
   color: var(--color-primary-darker);
   border-radius: var(--radius-md);
