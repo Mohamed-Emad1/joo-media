@@ -66,7 +66,7 @@
   position: fixed;
   inset-inline: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 1060;
   padding-block: 1.4rem;
   transition: padding var(--t-fast), background var(--t-fast), box-shadow var(--t-fast);
 }
