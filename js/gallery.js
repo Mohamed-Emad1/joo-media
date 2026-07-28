@@ -36,7 +36,9 @@
     document.body.style.overflow = "";
   }
 
-  items.forEach((item) => {
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  [...items, ...galleryItems].forEach((item) => {
     item.addEventListener("click", () => {
       const img = item.querySelector("img");
       openLightbox(img.src, img.alt);
