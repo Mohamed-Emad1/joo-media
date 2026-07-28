@@ -39,6 +39,7 @@
   const galleryItems = document.querySelectorAll(".gallery-item");
 
   [...items, ...galleryItems].forEach((item) => {
+    if (item.tagName === "A") return;
     item.addEventListener("click", () => {
       const img = item.querySelector("img");
       openLightbox(img.src, img.alt);
