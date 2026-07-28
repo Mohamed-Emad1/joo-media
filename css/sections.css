@@ -575,6 +575,14 @@
   transition: transform var(--t-slow);
 }
 
+.masonry-item--fit {
+  background: var(--color-white);
+}
+
+.masonry-item--fit img {
+  object-fit: contain;
+}
+
 .masonry-item:hover img {
   transform: scale(1.12);
 }
