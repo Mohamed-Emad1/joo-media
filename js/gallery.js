@@ -39,7 +39,7 @@
   const galleryItems = document.querySelectorAll(".gallery-item");
 
   [...items, ...galleryItems].forEach((item) => {
-    if (item.tagName === "A") return;
+    if (item.tagName === "A" || item.classList.contains("masonry-item--soon")) return;
     item.addEventListener("click", () => {
       const img = item.querySelector("img");
       openLightbox(img.src, img.alt);

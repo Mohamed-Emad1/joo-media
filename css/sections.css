@@ -583,6 +583,30 @@
   object-fit: contain;
 }
 
+.masonry-item--soon {
+  cursor: default;
+  background: var(--gradient-card);
+  border: 1px solid var(--glass-border);
+}
+
+.masonry-item__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  text-align: center;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.masonry-item__placeholder i {
+  font-size: 1.6rem;
+}
+
 .masonry-item:hover img {
   transform: scale(1.12);
 }
