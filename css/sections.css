@@ -547,7 +547,6 @@
 .masonry {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 10px;
   gap: var(--space-md);
 }
 
@@ -556,16 +555,8 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   cursor: pointer;
-  grid-row-end: span 24;
+  aspect-ratio: 1 / 1;
   transition: transform var(--t-fast);
-}
-
-.masonry-item:nth-child(3n + 1) {
-  grid-row-end: span 30;
-}
-
-.masonry-item:nth-child(4n + 2) {
-  grid-row-end: span 20;
 }
 
 .masonry-item img {
@@ -652,12 +643,6 @@
 @media (max-width: 560px) {
   .masonry {
     grid-template-columns: 1fr;
-  }
-
-  .masonry-item,
-  .masonry-item:nth-child(3n + 1),
-  .masonry-item:nth-child(4n + 2) {
-    grid-row-end: span 26;
   }
 }
 
